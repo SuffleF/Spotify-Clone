@@ -6,15 +6,15 @@ import { HeadphonesIcon, Music, Users } from "lucide-react";
 import { useEffect } from "react";
 
 const FriendsActivity = () => {
-    const { users, fetchUsers, onlineUsers, userActivities } = useChatStore();
+	const { users, fetchUsers, onlineUsers, userActivities } = useChatStore();
 	const { user } = useUser();
 
 	useEffect(() => {
 		if (user) fetchUsers();
 	}, [fetchUsers, user]);
 
-    return (
-        <div className="h-full bg-zinc-900 rounded-lg flex flex-col">
+	return (
+		<div className="h-full bg-zinc-900 rounded-lg flex flex-col">
 			<div className="p-4 flex justify-between items-center border-b border-zinc-800">
 				<div className="flex items-center gap-2">
 					<Users className="size-5 shrink-0" />
@@ -23,7 +23,7 @@ const FriendsActivity = () => {
 			</div>
 
 			{!user && <LoginPrompt />}
-			
+
 			<ScrollArea className="flex-1">
 				<div className="p-4 space-y-4">
 					{users.map((user) => {
@@ -41,10 +41,8 @@ const FriendsActivity = () => {
 											<AvatarImage src={user.imageUrl} alt={user.fullName} />
 											<AvatarFallback>{user.fullName[0]}</AvatarFallback>
 										</Avatar>
-										<div
-											className={`absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-zinc-900 
-												${onlineUsers.has(user.clerkId) ? "bg-green-500" : "bg-zinc-500"}
-												`}
+										<div 
+											className={`absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-zinc-900 ${onlineUsers.has(user.clerkId) ? "bg-green-500" : "bg-zinc-500"}`}
 											aria-hidden="true"
 										/>
 									</div>
@@ -55,7 +53,9 @@ const FriendsActivity = () => {
 											{isPlaying && <Music className="size-3.5 text-emerald-400 shrink-0" />}
 										</div>
 
-										{isPlaying ? (
+										{isPlaying 
+										? 
+										(
 											<div className="mt-1">
 												<div className="mt-1 text-sm text-white font-medium truncate">
 													{activity.replace("Playing ", "").split(" by ")[0]}
@@ -64,7 +64,9 @@ const FriendsActivity = () => {
 													{activity.split(" by ")[1]}
 												</div>
 											</div>
-										) : (
+										) 
+										: 
+										(
 											<div className="mt-1 text-xs text-zinc-400">Idle</div>
 										)}
 									</div>
@@ -75,15 +77,14 @@ const FriendsActivity = () => {
 				</div>
 			</ScrollArea>
 		</div>
-    )
-}
-
-export default FriendsActivity
+	);
+};
+export default FriendsActivity;
 
 const LoginPrompt = () => (
 	<div className="h-full flex flex-col items-center justify-center p-6 text-center space-y-4">
 		<div className="relative">
-			<div
+			<div 
 				className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full blur-lg opacity-75 animate-pulse"
 				aria-hidden="true"
 			/>

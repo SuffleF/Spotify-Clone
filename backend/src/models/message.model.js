@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const messageSchema = new mongoose.Schemq({
+const messageSchema = new mongoose.Schema({
     senderId: {
         type: String,
         required: true,
@@ -15,4 +15,4 @@ const messageSchema = new mongoose.Schemq({
     },
 }, {timestamps: true}); // CreatedAt and UpdatedAt
 
-export const Message = mongoose.model('Message', messageSchema);
+export const Message = mongoose.model("Message", messageSchema);

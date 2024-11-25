@@ -43,7 +43,7 @@ export const createSong = async (req, res, next) => {
 
 		await song.save();
 
-		// if song belongs to an album, update the album's songs array
+		// if song belongs to an album, update the album"s songs array
 		if (albumId) {
 			await Album.findByIdAndUpdate(albumId, {
 				$push: { songs: song._id },
@@ -64,7 +64,7 @@ export const deleteSong = async (req, res, next) => {
 
 		const song = await Song.findById(id);
 
-		// if song belongs to an album, update the album's songs array
+		// if song belongs to an album, update the album"s songs array
 		if (song.albumId) {
 			await Album.findByIdAndUpdate(song.albumId, {
 				$pull: { songs: song._id },

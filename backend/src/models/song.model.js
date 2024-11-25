@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const songSchema = new mongoose.Schema({
     title: {
@@ -23,10 +23,10 @@ const songSchema = new mongoose.Schema({
     },
     albumId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Album',
+        ref: "Album",
         required: false,
 
     },
 }, {timestamps: true}); // CreatedAt and UpdatedAt
 
-export const Song = mongoose.model('Song', songSchema);
+export const Song = mongoose.model("Song", songSchema);

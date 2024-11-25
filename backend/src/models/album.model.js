@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const AlbumSchema = new mongoose.Schema({
     title: {
@@ -23,4 +23,4 @@ const AlbumSchema = new mongoose.Schema({
     }]
 }, {timestamps: true}); // CreatedAt and UpdatedAt
 
-export const Album = mongoose.model('Album', AlbumSchema);
+export const Album = mongoose.model("Album", AlbumSchema);
