@@ -69,7 +69,7 @@ export const usePlayerStore = create<PlayerStore>((set,get) => ({
         const nextIndex = currentIndex + 1;
 
         // if there is a next song to play, let's play it
-        if(nextIndex > queue.length) {
+        if(nextIndex < queue.length) {
             const nextSong = queue[nextIndex]
 
             set({

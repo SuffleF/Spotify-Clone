@@ -5,9 +5,9 @@ import { axiosInstance } from "@/lib/axios"
 import { Loader } from "lucide-react";
 
 const updateApiToken = (token:string | null) => {
-    if(token) axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    if(token) axiosInstance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-    else delete axiosInstance.defaults.headers.common['Authorization'];
+    else delete axiosInstance.defaults.headers.common["Authorization"];
 }
 
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {

@@ -20,9 +20,9 @@ const PlayButton = ({song} : {song: Song}) => {
 		>
       {isCurrentSong && isPlaying 
       ? 
-      ( <Pause className='size-5 text-black' /> ) 
+      ( <Pause className="size-5 text-black" /> ) 
       : 
-      ( <Play className='size-5 text-black' /> )}
+      ( <Play className="size-5 text-black" /> )}
     </Button>
   )
 }

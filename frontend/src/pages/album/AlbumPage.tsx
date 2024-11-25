@@ -77,9 +77,9 @@ const AlbumPage = () => {
                       >
                           {isPlaying && currentAlbum?.songs.some((song) => song._id === currentSong?._id) 
                           ? 
-                          ( <Pause className='h-7 w-7 text-black' /> ) 
+                          ( <Pause className="h-7 w-7 text-black" /> ) 
                           : 
-                          ( <Play className='h-7 w-7 text-black' /> )}
+                          ( <Play className="h-7 w-7 text-black" /> )}
                       </Button>
                   </div>
 
@@ -112,7 +112,7 @@ const AlbumPage = () => {
                                       (<div className="size-4 text-green-500">♫</div>) : (<span className="group-hover:hidden">{index + 1}</span>)
                                     }
                                     {!isCurrentSong && (
-                                      <Play className='h-4 w-4 hidden group-hover:block' />
+                                      <Play className="h-4 w-4 hidden group-hover:block" />
                                     )}
                                   </div>
 
