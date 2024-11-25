@@ -148,7 +148,6 @@ export const useMusicStore = create<MusicStore>((set) => ({
 		try {
 			const response = await axiosInstance.get(`/albums/${id}`);
 			set({ currentAlbum: response.data });
-			console.log("Fetching")
 		} 
 		
 		catch (error: any) {

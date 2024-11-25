@@ -30,7 +30,7 @@ export const initializeSocket = (server) => {
         })
 
         socket.on("update_activity", (userId, activity) => {
-            console.log("activiy updated", userId, activity);
+            // console.log("activiy updated", userId, activity);
 
             userActivities.set(userId, activity);
 

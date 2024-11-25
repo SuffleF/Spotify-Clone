@@ -27,9 +27,7 @@ const ChatPage = () => {
     useEffect(() => {
       if (selectedUser) fetchMessages(selectedUser.clerkId);
     }, [selectedUser, fetchMessages]);
-
-    console.log({ messages });
-
+    
     return (
       <main className="h-full rounded-lg bg-gradient-to-b from-zinc-800 to-zinc-900 overflow-hidden">
         <Topbar />
