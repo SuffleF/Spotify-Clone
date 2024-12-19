@@ -21,3 +21,15 @@ CLERK_SECRET_KEY=...
 ```bash
 VITE_CLERK_PUBLISHABLE_KEY=...
 ```
+
+### Build the app
+
+```bash
+npm run build
+```
+
+### Build the app
+
+```bash
+npm run start
+```
