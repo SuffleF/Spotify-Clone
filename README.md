@@ -1,6 +1,6 @@
 <h1 align="Left">Spotify Clone</h1>
 
-<h3>This project was built using TypeScript, JavaScript (React), CSS (TailwindCSS) and MongoDB (Mongoose).</h3> 
+<h4>This project was built using TypeScript, JavaScript (React), CSS (TailwindCSS) and MongoDB (Mongoose).</h4> 
 
 ### For .env file in _backend_ folder
 
