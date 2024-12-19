@@ -28,7 +28,7 @@ VITE_CLERK_PUBLISHABLE_KEY=...
 npm run build
 ```
 
-### Build the app
+### Start the app
 
 ```bash
 npm run start
