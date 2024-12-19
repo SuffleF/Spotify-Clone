@@ -50,7 +50,8 @@ const MainLayout = () => {
 				)}
 
             </ResizablePanelGroup>
-
+            
+            { /* Player and player options sectio */}
             <PlaybackControls />
         </div>
     )

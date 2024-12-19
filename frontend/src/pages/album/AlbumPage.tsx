@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { useMusicStore } from "@/stores/useMusicStore";
 import { usePlayerStore } from "@/stores/usePlayerStore";
 import { Clock, Pause, Play } from "lucide-react";
@@ -43,12 +43,14 @@ const AlbumPage = () => {
   return ( 
     <div className="h-full">
         <ScrollArea className="h-full rounded-md">
+          <ScrollBar className="z-20 bg-none" />
+
             {/* Main Content */}
-            <div className="relative min-h-full">
+            <div className="relative h-screen">
 
               {/* Background Gradient */}
               <div className="absolute inset-0 bg-gradient-to-b from-[#5038a0]/80 via-zinc-900/90 to-zinc-900 pointer-events-none" aria-hidden="true" />
-
+            
               {/* Content */}
               <div className="relative z-10">
                   <div className="flex p-6 gap-6 pb-8">
