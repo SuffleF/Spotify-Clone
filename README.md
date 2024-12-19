@@ -2,7 +2,7 @@
 
 <h4>This project was built using TypeScript, JavaScript (React), CSS (TailwindCSS) and MongoDB (Mongoose).</h4> 
 
-### For .env file in _backend_ folder
+### For .env file in backend folder
 
 ```bash
 PORT=...
